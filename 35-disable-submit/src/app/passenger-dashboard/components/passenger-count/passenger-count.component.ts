@@ -7,11 +7,11 @@ import { Passenger } from '../../models/passenger.interface';
   template: `
     <div>
       <h3>Airline Passengers!</h3>
-      <div *ngIf="items.length;else NoPassengers">
+      <div *ngIf="items; else NoPassengers">
         Total checked in: {{ checkedInCount() }}/{{ items.length }}
       </div>
       <ng-template #NoPassengers>
-        No passengers registered yet.
+        Total checked in: 0/0
       </ng-template>
     </div>
   `
